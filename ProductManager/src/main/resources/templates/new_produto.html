@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<style>
+
+
+</style>
+<link rel="stylesheet" href="style.css">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="d-flex justify-content-center text-right">
+	
+	<form class="w-auto m-5 shadow-lg p-4 mb-5 bg-white rounded" action="#" th:action="@{/save}" th:object="${produtoview}"
+		method="post">
+			<h1 class="mb-5 display-4 font-italic">Produto</h2>
+		<div class="dark"> Nome produto <input type="text"  class="campo" placeholder="ex. Oculos" th:field="*{nome}">
+		<hr>
+		Marca <input type="text" placeholder="ex. Rayban" th:field="*{marca}" >
+		<hr>
+		Criado em: <input type="text" placeholder="ex. 20/10/2020" th:field="*{criado_em}">
+		<hr>
+		Preço <input type="text" placeholder="ex. 100" th:field="*{preco}" />
+		<hr>
+		</div>
+		<button type="submit" class="btn btn-outline-success btn-lg m-3">Save</button>
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get Produto</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="d-flex justify-content-center">
+	<div  class="d-flex justify-content-center container text-center w-auto m-5 shadow-lg p-5 mb-5 bg-white rounded ">
+	<table border="1" class="p-4 table table-hover text-center">
+		<thead class="thead-dark">
+			<tr>
+				<th class="p-3">ID</th>
+				<th class="p-3">Nome</th>
+				<th class="p-3">Marca</th>
+				<th class="p-3">Criado em</th>
+				<th class="p-3">Preco</th>
+				<th class="p-3">Acao</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="produtinho : ${listaprodutosview}">
+
+					<td th:text="${produtinho.id}">AA1234</td>
+					<td th:text="${produtinho.nome}">Aqui vem o nome</td>
+
+					<td th:text="${produtinho.marca}">Aqui vem a marca</td>
+					<td th:text="${produtinho.criado_em}">...Data</td>
+					<td th:text="${produtinho.preco}">R...Valor</td>
+				<td>
+					<button value="editar" class="btn btn-outline-success btn-lg m-3">Editar</button>
+				</td>
+			</tr>
+		</tbody>		
+	</table>
+	</div>
+</body>
+</html>
